@@ -3469,6 +3469,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.AJAX.Acts.Request,
 		C3.Plugins.System.Exps.canvassnapshot,
 		C3.Plugins.Sprite.Acts.LoadURL,
+		C3.Plugins.AJAX.Acts.OverrideMIMEType,
 		C3.Plugins.AJAX.Acts.PostBinary,
 		C3.Plugins.AJAX.Cnds.OnComplete,
 		C3.Plugins.Browser.Acts.ConsoleLog,
@@ -3597,8 +3598,9 @@ self.C3_ExpressionFuncs = [
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0();
 		},
+		() => "multipart/form-data",
 		() => "sendImage",
-		() => "https://api.imgbb.com/1/upload?KEY=beb78ef7361c56a858261d8ad77282f4",
+		() => "https://api.imgbb.com/1/upload?key=beb78ef7361c56a858261d8ad77282f4",
 		() => "POST",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
